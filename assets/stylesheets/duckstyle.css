@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway');
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+font-family: 'Josefin Sans', sans-serif;
+}
+
+h3 {
+font-family: 'Raleway', sans-serif;
+}
+
+body {
+display: grid;
+grid-template-columns: 1fr 4fr 1fr;
+grid-template-rows: minmax(80px, 1.2fr) 5fr minmax(20px, 0.2fr);
+}
+
+header {
+grid-row: 1;
+grid-column: 1 / 4;
+}
+
+#title {
+line-height: 10px;
+}
+
+nav > ul {
+display: inline-flex;
+} 
+
+footer {
+grid-row: 3;
+grid-column: 1 / 4;
+}
+
+.previous {
+grid-row: 2;
+grid-column: 1;
+margin: auto;
+}
+
+.previous#inactive-previous {
+color:grey;
+}
+
+.next {
+grid-row: 2;
+grid-column: 3;
+margin: auto;
+}
+
+.content {
+grid-row: 2;
+grid-column: 2;
+margin: auto;
+border: 4px;
+border-style: solid;
+padding: 36vh 36vw;
+}
+
+#first-content {
+display: block;
+background-color: red;
+}
+
+#second-content {
+display: none;
+background-color: blue;
+}
+
+#third-content {
+display: none;
+background-color: purple;
+}
+
+input[type="radio"]{
+	display: none;
+}
+
+label {
+cursor: pointer;
+}
+
+/* All the next and previous buttons (which are radio button labels) are hidden on first load except for the inactive previous and the second-next button */
+label[for="first-previous"], label[for="second-previous"], label[for="third-next"], label[for="fourth-next"] {
+display: none;
+}
+
+/* When the second-next button is clicked ("checked" since it is really a radio button) the inactive-previous and second-next buttons should be hidden and the first-previous and third-next buttons should be
+ * made visible while the first content is hidden and the second content is made visible.
+ * Repeat this pattern for all next buttons. */
+
+
+#second-next:checked ~ #inactive-previous {
+display: none;
+}
+
+#second-next:checked {
+display: none;
+}
+
+#second-next:checked ~ label[for="first-previous"] {
+display: block;
+}
+
+#second-next:checked ~ label[for="third-next"] {
+display: block;
+}
+
+#second-next:checked ~ #second-content {
+display: block;
+}
+
+#second-next:checked ~ #first-content {
+display: none;
+}
+
+
+/* When the first-previous button is clicked the third-next and first-previous buttons should be hidden and the inactive-previous and second-next buttons should be made visible.
+ * The first-content should be visible and the second-content hidden.
+ * Repeat this pattern for all previous buttons. */
+
+#first-previous:checked ~ label[for="third-next"] label[for="first-previous"] {
+display: none;
+}
+
+#first-previous:checked ~ #inactive-previous label[for="second-next"] {
+display: block;
+}
+ 
+#first-previous:checked ~ #second-content {
+display: none;
+}
+
+#first-previous:checked ~ #first-content {
+display: block;
+}
+
+
+/* Actions for the third-next button. */
+
+
+#third-next:checked ~ label[for="second-previous"] label[for="fourth-next"] {
+display: block;
+}
+
+#third-next:checked ~ label[for="first-previous"] label[for="second-next"] {
+display: none;
+}
+
+#third-next:checked ~ #second-content {
+display: none;
+}
+
+#third-next:checked ~ #third-content {
+display: block;
+}
+
+/* Actions for the second-previous button. */
+
+#second-previous:checked ~ #third-content {
+display: none;
+}
+
+#second-previous:checked ~ #second-content {
+display: block;
+}
+
+#second-previous:checked ~ label[for="first-previous"] {
+display: block;
+}

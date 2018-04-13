@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway');
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  color: #313030;
+  
+}
+
+html {
+background-image: url("../images/smartphone-pile-old-phone-junk.jpg");
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+p{
+  padding: 30px;
+}
+  
+li {
+  padding: 0 30px;
+}
+
+img, iframe {
+  border-radius: 12px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: rgba(237,173,173,0.3);
+  /*grid-template-rows: minmax(80px, 1.2fr) 5fr minmax(20px, 0.2fr);*/
+  /*grid-template-columns: 100vw;*/
+}
+
+header {
+  /*grid-row: 1;*/
+  position: fixed;
+  height: auto;
+  max-height: 100px;
+  min-height: 80px;
+  width: 100vw;
+  background: linear-gradient(to bottom right, rgba(237,173,173, 0.7), rgba(237,173,173,0.05));
+  padding-left: 20px;
+  text-shadow: 2px 2px 4px #DAF7A6;
+}
+
+#title {
+  line-height: 10px;
+}
+
+nav > ul {
+  display: inline-flex;
+} 
+
+.content {
+  /*grid-row: 2;*/
+  position: relative;
+  top: 80px;
+  height: calc(100vh - 112px);
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 4fr 1fr;
+  width: 100vw;
+}
+
+footer {
+  /*grid-row: 3;*/
+  /*grid-column: 1 / 4;*/
+  height: 20px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  margin-left: 10px;
+  background: linear-gradient(to top right, rgba(237,173,173, 0.7), rgba(237,173,173,0.1));
+}
+
+.far {
+
+}
+
+.previous {
+  grid-row: 1;
+  grid-column: 1;
+  margin: auto;
+
+}
+
+.previous#previous-to-zero, .next#next-to-sixteenth {
+  color:grey;
+}
+
+.next {
+  grid-row: 1;
+  grid-column: 3;
+  margin: auto;
+}
+
+.slide {
+  background: linear-gradient(to bottom, #edadad, #DAF7A6); /*-color: #EDADAD;*/
+  width: calc(100vw - 202px);
+  grid-row: 1;
+  grid-column: 2;
+  border: 4px;
+  border-radius: 12px;
+  border-style: solid;
+  display:flex; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.img_container {
+display:flex; 
+flex-wrap: wrap; 
+width:100%;
+height: 100%; 
+justify-content: space-evenly;
+align-items: center;
+}
+
+
+img {
+  max-width: 40%;
+  min-width: 20%;
+  height: auto;
+  
+  
+}
+
+
+input[type="radio"]{
+	display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+/* movements */
+
+#next-to-second:checked ~ .content {
+ transform: translateX(-100vw);
+}
+
+#previous-to-first:checked ~ .content {
+  transform: translateX(0vw);
+}
+
+#next-to-third:checked ~ .content {
+  transform: translateX(-200vw);
+}
+
+#previous-to-second:checked ~ .content {
+  transform: translateX(-100vw);
+}
+
+#next-to-fourth:checked ~ .content {
+  transform: translateX(-300vw);
+}
+
+#previous-to-third:checked ~ .content {
+  transform: translateX(-200vw);
+}
+
+#next-to-fifth:checked ~ .content {
+  transform: translateX(-400vw);
+}
+
+#previous-to-fourth:checked ~ .content {
+  transform: translateX(-300vw);
+}
+
+#next-to-sixth:checked ~ .content {
+  transform: translateX(-500vw);
+}
+
+#previous-to-fifth:checked ~ .content {
+  transform: translateX(-400vw);
+}
+
+#next-to-seventh:checked ~ .content {
+  transform: translateX(-600vw);
+}
+
+#previous-to-sixth:checked ~ .content {
+  transform: translateX(-500vw);
+}
+
+#next-to-eighth:checked ~ .content {
+  transform: translateX(-700vw);
+}
+
+#previous-to-seventh:checked ~ .content {
+  transform: translateX(-600vw);
+}
+
+#next-to-ninth:checked ~ .content {
+  transform: translateX(-800vw);
+}
+
+#previous-to-eighth:checked ~ .content {
+  transform: translateX(-700vw);
+}
+
+#next-to-tenth:checked ~ .content {
+  transform: translateX(-900vw);
+}
+
+#previous-to-ninth:checked ~ .content {
+  transform: translateX(-800vw);
+}
+
+#next-to-eleventh:checked ~ .content {
+  transform: translateX(-1000vw);
+}
+
+#previous-to-tenth:checked ~ .content {
+  transform: translateX(-900vw);
+}
+
+#next-to-twelfth:checked ~ .content {
+  transform: translateX(-1100vw);
+}
+
+#previous-to-eleventh:checked ~ .content {
+  transform: translateX(-1000vw);
+}
+
+#next-to-thirteenth:checked ~ .content {
+  transform: translateX(-1200vw);
+}
+
+#previous-to-twelfth:checked ~ .content {
+  transform: translateX(-1100vw);
+}
+
+#next-to-fourteenth:checked ~ .content {
+  transform: translateX(-1300vw);
+}
+
+#previous-to-thirteenth:checked ~ .content {
+  transform: translateX(-1200vw);
+}
+
+#next-to-fifteenth:checked ~ .content {
+  transform: translateX(-1400vw);
+}
+
+#previous-to-fourteenth:checked ~ .content {
+  transform: translateX(-1300vw);
+}
+
+/* transitions */
+
+/*
+#next-to-second:checked ~ .content > .slide {
+     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+/*
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+/*
+        -ms-animation: fadein 1s; /* Internet Explorer */
+/*
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+/*
+            animation: fadein 1s;
+*/
+
+*/
+}
+*/
+*/
+
