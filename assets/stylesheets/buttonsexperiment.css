@@ -23,8 +23,9 @@ h3 {
   font-family: 'Raleway', sans-serif;
 }
 
-p{
+p {
   padding: 30px;
+  padding-top: 0px;
 }
   
 li {
@@ -55,7 +56,7 @@ header {
   width: 100vw;
   background: linear-gradient(to bottom right, rgba(237,173,173, 0.7), rgba(237,173,173,0.05));
   padding-left: 20px;
-  text-shadow: 2px 2px 4px #DAF7A6;
+  text-shadow: 2px 2px 4px #B8bedd;
 }
 
 #title {
