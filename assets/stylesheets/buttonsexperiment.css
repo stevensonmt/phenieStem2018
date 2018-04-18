@@ -171,6 +171,24 @@ img {
   
 }
 
+#cress_seeds_content {
+display: flex;
+flex-direction: column;
+margin: 10px;
+}
+
+#cress_seeds_content > img {
+margin: 0 30px;
+}
+
+#survey {
+width: 600px;
+height: 800px;
+float: left;
+position: relative;
+left: calc(50% - 300px);
+
+}
 
 input[type="radio"]{
 	display: none;
